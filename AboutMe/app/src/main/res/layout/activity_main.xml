@@ -4,15 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Take a look at my ride!"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToInterior"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonExt"
+        android:text="Interior Mods"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="142dp"
+        />
+
+    <Button
+        android:id="@+id/buttonExt"
+        android:onClick="goToExterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonPer"
+        android:text="Exterior Mods"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <Button
+        android:id="@+id/buttonPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/buttonExt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Performance Parts"
+        android:onClick="goToPerformance"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
